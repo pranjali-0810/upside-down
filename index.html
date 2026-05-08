@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Upside Down Pulse</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="monitor">
+        <h1>STATION 011: SIGNALS</h1>
+        <div id="feed">
+            <!-- Messages will appear here -->
+            <div class="message-flicker">&gt; WAITING FOR CONNECTION...</div>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="message-input" placeholder="Enter signal..." autocomplete="off">
+            <button onclick="sendSignal()">SEND</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
