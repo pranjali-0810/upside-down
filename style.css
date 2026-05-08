@@ -1,0 +1,32 @@
+body {
+  background-color: #050505;
+  color: #e60000; /* Eleven's red */
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+/* CRT Scanline effect */
+body::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+#feed {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-left: 2px solid #e60000;
+  padding-left: 15px;
+}
